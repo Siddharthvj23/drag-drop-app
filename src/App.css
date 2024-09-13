@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+main {
+  background-color: #3da8e0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: black;
+  user-select: none;
+}
+
+.dropZonesContainer {
+  width: 100%;
+  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+.statusHeader {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.drop-container {
+  background-color: #e2e5e7;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 4px;
+}
+
+.Dragitem {
+  padding: 10px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.taskHeader {
+  font-size: large;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .dropZonesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .drop-container {
+    padding: 10px;
+  }
+}
