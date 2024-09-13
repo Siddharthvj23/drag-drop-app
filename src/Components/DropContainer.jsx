@@ -3,17 +3,13 @@ import { useDrop } from 'react-dnd';
 import DragItem from './Dragitems';
 
 const DropContainer = ({ items, handleDrop, containerName }) => {
-  const [{ isOver }, drop] = useDrop(() => ({
+  const [, drop] = useDrop(() => ({
     accept: 'TASK_CARD',
     drop: (item) => {
-      console.log(item, containerName)
       if (item.containerName !== containerName) {
         handleDrop(item.containerName, containerName, item)
       }
     },
-    collect: (monitor) => ({
-      isOver: monitor.isOver(),
-    }),
   }));
 
   return (
