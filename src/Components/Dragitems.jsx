@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 const DragItem = ({ id, title, description, containerName }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: 'TASK_CARD',
@@ -13,7 +14,7 @@ const DragItem = ({ id, title, description, containerName }) => {
   return (
     <div className='Dragitem' ref={drag} style={{ opacity: isDragging ? 0.8 : 1 }}>
       <div className='taskHeader'>{title}</div>
-      
+      <button className='Delbutton'><FontAwesomeIcon icon={faTrash}/></button>
       <p>{description}</p>
     </div>
   );
