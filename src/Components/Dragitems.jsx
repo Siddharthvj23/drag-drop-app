@@ -14,7 +14,7 @@ const DragItem = ({ id, title, description, containerName }) => {
   return (
     <div className='Dragitem' ref={drag} style={{ opacity: isDragging ? 0.8 : 1 }}>
       <div className='taskHeader'>{title}</div>
-      <button className='Delbutton'><FontAwesomeIcon icon={faTrash}/></button>
+      <button className='Delbutton'><FontAwesomeIcon icon={faTrash} transform="shrink-2 left-6"/></button>
       <p>{description}</p>
     </div>
   );

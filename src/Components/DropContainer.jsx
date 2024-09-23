@@ -28,7 +28,7 @@ const AddNewTask = ()=>{
   return (
     <div ref={drop} className="drop-container">
       <div className='statusHeader'>{containerName}</div>
-      <button className='addbutton' onClick={AddNewTask}><FontAwesomeIcon icon={faPlus}/></button>
+      <button className='addbutton' onClick={AddNewTask}><FontAwesomeIcon icon={faPlus} transform="shrink-2 left-6"/></button>
       
       {items.map(item => {
         return (
